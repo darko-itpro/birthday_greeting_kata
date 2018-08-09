@@ -20,7 +20,7 @@ for emp in file:
     emp_data = emp[:-1].split(', ')
 
     try:
-        if emp_data[2] == datetime.datetime.now().strftime('%d/%m/%Y'):
+        if emp_data[2][:5] == datetime.datetime.now().strftime('%d/%m'):
             send_email(emp_data[-1], 'Joyeux Anniversaire',
                        "Subject: Happy birthday!\n\nHappy birthday, dear " +
                        emp_data[1])

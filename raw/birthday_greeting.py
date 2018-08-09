@@ -10,7 +10,7 @@ Happy birthday, dear {}!"""
 
 FILE_PATH = 'asset/employee.txt'
 
-TODAY = datetime.datetime.now().strftime('%d/%m/%Y')
+TODAY = datetime.datetime.now().strftime('%d/%m')
 
 
 def employees_birthday_extract(filename):
@@ -24,7 +24,7 @@ def employees_birthday_extract(filename):
             except ValueError:
                 continue
 
-            if date_as_string == TODAY:
+            if date_as_string[:5] == TODAY:
                 yield first_name, email
 
 
