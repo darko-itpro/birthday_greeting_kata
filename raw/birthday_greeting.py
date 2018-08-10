@@ -19,7 +19,7 @@ def employees_birthday_extract(filename):
 
         for employee_line in employee_file:
             try:
-                last_name, first_name, date_as_string, email\
+                first_name, last_name, date_as_string, email\
                     = employee_line[:-1].split(', ')
             except ValueError:
                 continue

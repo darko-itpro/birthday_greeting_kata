@@ -23,7 +23,7 @@ for emp in file:
         if emp_data[2][:5] == datetime.datetime.now().strftime('%d/%m'):
             send_email(emp_data[-1], 'Joyeux Anniversaire',
                        "Subject: Happy birthday!\n\nHappy birthday, dear " +
-                       emp_data[1])
+                       emp_data[0])
 
     except IndexError:
         print("Wrong data for", emp_data)
