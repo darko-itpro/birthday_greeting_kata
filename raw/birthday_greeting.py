@@ -2,8 +2,6 @@
 
 import datetime
 
-# last, first, 1982/10/08, email
-
 GREETING_MESSAGE = """Subject: Happy birthday!
 
 Happy birthday, dear {}!"""

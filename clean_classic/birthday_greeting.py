@@ -2,9 +2,6 @@
 
 import datetime
 import logging
-from typing import Iterable, Optional
-
-# last, first, 1982/10/08, email
 
 GREETING_MESSAGE = """Subject: Happy birthday!
 

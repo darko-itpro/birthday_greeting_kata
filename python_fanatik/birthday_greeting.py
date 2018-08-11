@@ -4,8 +4,6 @@ import datetime
 import logging
 from typing import Iterable, Optional
 
-# last, first, 1982/10/08, email
-
 GREETING_MESSAGE = """Subject: Happy birthday!
 
 Happy birthday, dear {}!"""
@@ -13,6 +11,17 @@ Happy birthday, dear {}!"""
 
 def is_employee_birthday(employee_data,
                          birthday_on=datetime.datetime.now().strftime('%d/%m')):
+    """
+    Returns True or False if it's employee's birthday.
+
+    :param employee_data: A sequence of elements in which the third should be a
+    date containing at least DD/MM.
+    :param birthday_on: string representation of a date. The format should match
+    the `employee_data` date format. Optional, if missing, today's date in DD/MM
+    format will be used.
+    :return: True if the birthday date matches, False even if the data is
+    corrupted.
+    """
     try:
         return employee_data[2][:5] == birthday_on
     except IndexError:
